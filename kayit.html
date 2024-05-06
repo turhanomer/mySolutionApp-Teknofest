@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Çözüm Ortağım</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .form-control {
+            border: 4px solid black;
+        }
+
+        .asd {
+            margin-top: 5%;
+        }
+
+        .logo {
+            border-radius: 50%;
+        }
+
+        .giris {
+            box-shadow: black 0px 0px 20px -4px;
+            padding: 5%;
+            
+
+        }
+
+        .kayit-ol {
+            display: none;
+              
+        }
+        .kayit{
+            box-shadow: black 0px 0px 20px -4px;
+            padding: 5%;  
+        }
+        
+        .kayit-button {
+            background: none;
+            border: none;
+            text-decoration: underline;
+        }
+        .buton_giris{
+            color:z
+        }
+        .button-color {
+            background-color: rgba(13,110,253,0.25);
+            color: rgb(64, 64, 93);
+        }
+        .button-color:hover{
+           background-color: rgb(73, 73, 255)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <div class="row asd">
+            <div class="col-4"></div>
+            <div class="col-4 giris" id="giris">
+                <form action="" method="post" id="form1">
+                    <div class="col-12 text-center">
+                        <img src="PHOTO-2024-05-01-01-00-44.jpg" height="150" width="150" class="logo" alt="">
+                    </div>
+                    <div class="col-12">
+                        <label class="fs-4" for="">Kullanıcı Adı</label>
+                        <input type="text" class="form-control" name="kul_adi">
+                    </div>
+                    <div class="col-12">
+                        <label class="fs-4" for="">Şifre</label>
+                        <input type="password" class="form-control " name="sifre">
+                    </div>
+                    <div class="col-12">
+                        <p class="fs-4 text-end">Hesabınız yok mu <button onclick="kayitOl()" form=""
+                                class="kayit-button">Kayıt Ol</button></p>
+                    </div>
+                    <div></div>
+                    <div class="col-12 text-center">
+                        <input class="fs-4 btn button-color mt-3 " name="giris" value="Giriş Yap" type="submit">
+                    </div>
+                </form>
+
+
+            </div>
+            <!-- KAYIT  OLMA FORMU BAŞLANGIÇ-->
+            <div id="kayit-ol" class="kayit-ol kayit col-4 ">
+                <form action="" method="post" id="form2">
+                    <div class="col-12 text-center">
+                        <img src="PHOTO-2024-05-01-01-00-44.jpg" height="150" width="150" class="logo" alt="">
+                    </div>
+                    <div class="col-12">
+                        <label class="fs-4" for="kayit_kullanici_adi">İsim</label>
+                        <input type="text" name="kayit_kullanici_adi" class="form-control" name="isim">
+                    </div>
+                    <div class="col-12">
+                        <label class="fs-4" for="kayit_soyisim">Soyisim</label>
+                        <input type="name" id="kayit_sifre" class="form-control " name="soyisim">
+                    </div>
+                    <div class="col-12">
+                        <label class="fs-4" for="mail">Mail</label>
+                        <input type="email" id="mail" class="form-control " name="sifre">
+                    </div>
+                    <div class="col-12">
+                        <label class="fs-4" for="sifre">Şifre</label>
+                        <input type="password" name="sifre" class="form-control" name="isim">
+                    <div class="col-12">
+                        <div class="col-12">
+                            <label class="fs-4" for="kayit_sifre_tekrar">Şifre Tekrar</label>
+                            <input type="password" name="kayit_sifre_tekrar" class="form-control" name="isim">
+                        </div>
+                        
+                        <p class="fs-4 text-end">Hesabınız var mı <button onclick="girisYap()" form=""class="kayit-button">Giriş Yap</button></p>
+                    </div>
+                    <div class="col-12 text-center">
+                        <input class="fs-4 btn button-color mt-3" value="Kayıt Ol" name="kayit-ol" type="submit">
+                    </div>
+                </form>
+            </div>
+             <!-- KAYIT  OLMA FORMU BİTİŞ-->
+            <div class="col-4"></div>
+        </div>
+    </div>
+    <script>
+        function kayitOl() {
+            var element = document.getElementById("giris");
+            element.classList.toggle("d-none");
+            var element2 = document.getElementById("kayit-ol");
+            element2.classList.remove("kayit-ol");
+        }//burdaki kod giriş yapma sayfasını kapatıp kayıt olma sayfasını açıyor
+        
+        function girisYap() {
+            var element3 = document.getElementById("giris");
+            element3.classList.toggle("d-none");
+            var element4 = document.getElementById("kayit-ol");
+            element4.classList.add("kayit-ol");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
